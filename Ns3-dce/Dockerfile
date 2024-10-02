@@ -27,6 +27,3 @@ COPY ./dce-global-variables.cc /root/bake/source/ns-3-dce/model
 RUN ./bake.py build -o iputils
 RUN ./bake.py build
 
-RUN mkdir /root/bake/source/ns-3-dce/myscripts/simulacion
-COPY ./wscript /root/bake/source/ns-3-dce/myscripts/simulacion
-COPY ./simulacion.cc /root/bake/source/ns-3-dce/myscripts/simulacion
