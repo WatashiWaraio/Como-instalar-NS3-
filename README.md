@@ -41,8 +41,13 @@ Cuando descargues el repositorio de este proyecto, encontrarás un archivo **Doc
 
 Una vez que tengas Docker instalado, sigue estos pasos para ejecutar **ns-3.34**:
 
-1. Abre una terminal en la carpeta donde se encuentran los archivos del repositorio.
-2. Ejecuta el siguiente comando en la terminal para construir el contenedor con **ns-3**:
+1. Abre una terminal en la carpeta donde se encuentran los archivos del repositorio. El Dockerdile no debe ser txt, si tienes un archivo xtx ejecuta este comando.
+
+```bash
+$ move Dockerfile.txt Dockerfile
+```
+   
+3. Ejecuta el siguiente comando en la terminal para construir el contenedor con **ns-3**:
 
 ```bash
 $ docker build -t ns3-dce:v1 .
