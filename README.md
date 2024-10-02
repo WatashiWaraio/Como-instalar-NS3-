@@ -22,7 +22,7 @@ Si encuentras problemas con **ns-3**, recuerda que una buena práctica es consul
 * Una de las principales diferencias entre versiones es que la ejecución de scripts en **Python** puede no estar habilitada, pero **C++** es totalmente compatible.  🎖️
 
 **IMPORTANTE:**  
-**ns-3** está diseñado para ejecutarse en sistemas operativos **Linux**.
+**ns-3** está diseñado para ejecutarse en sistemas operativos **Linux** Sin embargo con el docker se puede instalar desde cualquier sistema operativo.
 
 ## 2. Instalación de Docker 🌟🐳🐳🐳
 
