@@ -30,6 +30,7 @@ Si encuentras problemas con **ns-3**, recuerda que una buena práctica es consul
 
 Para instalar Docker, sigue los pasos en la página oficial de Docker:  
 [Guía de instalación de Docker en Linux](https://docs.docker.com/desktop/install/linux/)
+[Guía de instalación de Docker en Windows](https://www.youtube.com/watch?v=ZO4KWQfUBBc)
 
 Cuando descargues el repositorio de este proyecto, encontrarás un archivo **Dockerfile** que contiene todas las configuraciones necesarias para instalar **ns-3** y sus dependencias. Esto te permitirá ejecutar **ns-3** de manera sencilla y sin complicaciones.
 
