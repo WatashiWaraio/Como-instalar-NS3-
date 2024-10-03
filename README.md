@@ -7,19 +7,25 @@ Pero esta instalacion te puede presentar varios problemas.
 
 ## 1. Selección de versión: **ns-3.34** ♟️
 
-Es crucial seleccionar la versión adecuada de **ns-3**, ya que esto afectará la elección del archivo de construcción. En la mayoría de los tutoriales en línea, se utiliza el archivo de construcción `./waf`, pero **las versiones más recientes** utilizan **CMake** o **MakeWaf** para compilar el simulador.  ⏬⏬⏬
+Es crucial seleccionar la versión adecuada de **ns-3**, ya que esto afectará la elección del programa de construcción. En la mayoría de los tutoriales en línea, se utiliza el programa de construcción **Waf** desde el archivo `./waf`, pero **las versiones más recientes** utilizan **CMake** o **MakeWaf** para compilar el simulador.  ⏬⏬⏬
 
-Para facilitar el proceso de instalación y evitar posibles problemas con dependencias, en este repositorio se proporciona un contenedor **Docker** que incluye **ns-3** y todas las dependencias necesarias preconfiguradas. De esta forma, podrás ejecutar **ns-3** sin complicaciones.
+Para facilitar el proceso de instalación y evitar posibles problemas con dependencias, este repositorio proporciona un **Dockerfile** para la descarga, compilación y configuración de **ns-3** y todas sus dependencias necesarias. De esta forma, podrás utilizar **ns-3** sin complicaciones.
+
+Además, el **Dockerfile** instala el módulo **DCE** (Direct Code Execution, o ejecución directa de código en español).
+
+   La Ejecución Directa de Código (DCE) es un framework para ns-3 que proporciona facilidades para ejecutar, dentro de ns-3, implementaciones existentes de protocolos de red o aplicaciones en espacio de usuario y espacio de kernel sin necesidad de cambios en el código fuente. (Nsnam, traducción propia)
+
+De esta manera, podrás ejecutar herramientas como `Iperf` y `ping` directamente desde una simulación de **ns-3**.
 
 Más información en la documentación oficial de ns-3:  
 
 ## [Documentación de ns-3](https://www.nsnam.org/documentation/) 🔴🔴🔴
 
-Si encuentras problemas con **ns-3**, recuerda que una buena práctica es consultar la documentación para depurar cualquier inconveniente. 🚀🚀
+Si encuentras problemas con **ns-3**, recuerda que una buena práctica es consultar la documentación para depurar cualquier inconveniente. 🚀🚀 (RTFM 😉)
 
 ### Nota importante:
 
-* Una de las principales diferencias entre versiones es que la ejecución de scripts en **Python** puede no estar habilitada, pero **C++** es totalmente compatible.  🎖️
+* El Dockerfile no compila los **Python** bindings para la ejecución de scripts en este lenguaje, pero **C++** esta totalmente habilitado.  🎖️
 
 **IMPORTANTE:**  
 **ns-3** está diseñado para ejecutarse en sistemas operativos **Linux** Sin embargo con el docker se puede instalar desde cualquier sistema operativo.
@@ -35,16 +41,16 @@ Para instalar Docker, sigue los pasos en la página oficial de Docker:
 
 [Guía de instalación de Docker en MacOs](https://www.youtube.com/watch?v=-EXlfSsP49A)
 
-Cuando descargues el repositorio de este proyecto, encontrarás un archivo **Dockerfile** que contiene todas las configuraciones necesarias para instalar **ns-3** y sus dependencias. Esto te permitirá ejecutar **ns-3** de manera sencilla y sin complicaciones.
+Cuando descargues el repositorio de este proyecto, encontrarás un archivo **Dockerfile** que contiene todas las configuraciones necesarias para instalar **ns-3** y sus dependencias. Esto te permitirá utilizar **ns-3** de manera sencilla y sin complicaciones.
 
 ## 3. Instalación de ns-3  📶📶📶
 
-Una vez que tengas Docker instalado, sigue estos pasos para ejecutar **ns-3.34**:
+Una vez que tengas Docker instalado, sigue estos pasos para utilizar **ns-3.34**:
 
-1. Abre una terminal en la carpeta donde se encuentran los archivos del repositorio. El Dockerdile no debe ser txt, si tienes un archivo xtx ejecuta este comando.
+1. Abre una terminal en la carpeta donde se encuentran los archivos del repositorio. El Dockerfile no debe terminar en la extensión _.txt_. Si tienes el archivo con esta extensión cambia el nombre. El siguiente comando se puede utilizar desde Windows en **Powershell**, o en Linux desde cualquier shell, para renombrar el archivo:
 
 ```bash
-$ move Dockerfile.txt Dockerfile
+$ mv Dockerfile.txt Dockerfile
 ```
    
 3. Ejecuta el siguiente comando en la terminal para construir el contenedor con **ns-3**:
@@ -61,14 +67,14 @@ Este comando creará una imagen de Docker con **ns-3** y sus dependencias listas
 $ docker run -it ns3-dce:v1 bash
 ```
 
-4. Desde la terminal del contenedor, ns-3 ya estará instalado y podrás comenzar a utilizarlo ejecutando scripts y simulaciones directamente desde esta terminal.
+4. Desde la terminal del contenedor, **ns-3** ya estará instalado y podrás comenzar a utilizarlo ejecutando scripts y simulaciones directamente desde esta terminal.
 
-   Si tienes dudas como abrir y ejecutar archivos en ns3 recuerda revisar la documentacion oficial o apoyarte de videos de youtube de otros creadores. 🎨🎨
+   Si tienes dudas de como abrir y ejecutar archivos en ns3 recuerda revisar la documentacion oficial o apoyarte de videos de youtube de otros creadores. 🎨🎨
 
 ## Creditos 👨‍💻👩‍💻
 
-# Docker creado por: 
-- EmanuelM153 (Estudiante de Ciencias de la computacion e inteligencia artificial)
+# Dockerfile creado por: 
+- @EmanuelM153 (Estudiante de Ciencias de la computacion e inteligencia artificial)
 
 # Manual escrito por:   
 - Karen (Estudiante de Ciencias de la computacion e inteligencia artificial)
